@@ -8,10 +8,12 @@ class Game {
   }
 
   isOver() {
+    debugger
     return this.board.isOver();
   }
 
   playMove(pos) {
+    debugger
     this.board.placeMark(pos, this.currentPlayer);
     this.swapTurn();
   }

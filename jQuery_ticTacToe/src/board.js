@@ -14,6 +14,7 @@ class Board {
   }
 
   isOver() {
+    debugger
     if (this.winner() != null) {
       return true;
     }
@@ -35,6 +36,7 @@ class Board {
     }
 
     this.grid[pos[0]][pos[1]] = mark;
+    debugger 
   }
 
   print() {
@@ -66,10 +68,11 @@ class Board {
       [[0, 0], [1, 1], [2, 2]],
       [[2, 0], [1, 1], [0, 2]]
     ];
-
     for (let i = 0; i < posSeqs.length; i++) {
+      debugger
       const winner = this.winnerHelper(posSeqs[i]);
       if (winner != null) {
+        debugger
         return winner;
       }
     }
@@ -79,9 +82,11 @@ class Board {
 
   winnerHelper(posSeq) {
     for (let markIdx = 0; markIdx < Board.marks.length; markIdx++) {
+      debugger 
       const targetMark = Board.marks[markIdx];
       let winner = true;
       for (let posIdx = 0; posIdx < 3; posIdx++) {
+        debugger
         const pos = posSeq[posIdx];
         const mark = this.grid[pos[0]][pos[1]];
 
@@ -91,6 +96,7 @@ class Board {
       }
 
       if (winner) {
+        debugger
         return targetMark;
       }
     }
