@@ -1,0 +1,16 @@
+/* PHASE 9: Forms */
+.input {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+}
+
+#textarea {
+  background: gray;
+  padding: 20px;
+}
+
+#titlearea {
+  background: gray;
+  padding: 20px;
+}
